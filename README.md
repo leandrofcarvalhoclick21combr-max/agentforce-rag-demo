@@ -79,7 +79,7 @@ Observe quais transcrições aparecem em **Contexto recuperado**. Se a evidênci
 
 - Use uma chave por pessoa e revogue chaves que tenham sido compartilhadas ou expostas.
 - Acompanhe consumo e limites no dashboard do Google AI Studio.
-- O modelo padrão do exemplo é `gemini-3.7-flash`; caso ele não esteja disponível para sua conta, execute `python list_models.py`, escolha um modelo listado e atualize `GEMINI_MODEL` no arquivo `.env`.
+- O modelo padrão do exemplo é `gemini-3.6-flash`, validado no demo. Caso ele não esteja disponível para sua conta, execute `python list_models.py`, escolha um modelo listado e atualize `GEMINI_MODEL` no arquivo `.env`.
 
 ## Próximos passos
 
