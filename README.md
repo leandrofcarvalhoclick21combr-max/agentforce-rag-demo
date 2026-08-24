@@ -54,13 +54,20 @@ python rag_demo.py
 
 Na primeira execução, o `sentence-transformers` baixa o modelo de embeddings. Em seguida, o programa mostra o contexto recuperado e a resposta do Gemini.
 
-## Experimente outras perguntas
+## Experimente perguntas sobre as calls
 
-No arquivo `rag_demo.py`, altere a variável `question` e execute de novo. Por exemplo:
+Depois de executar `python rag_demo.py`, escreva uma pergunta no terminal. O programa continua ativo para você testar várias perguntas; pressione Enter sem texto para encerrar.
 
-```python
-question = "What problem did the customer report during peak load?"
+Exemplos que fazem sentido para a base atual:
+
+```text
+What problem did the customer report during peak load?
+Which customer conversation mentions budget constraints?
+What did the client like in the analytics demo?
+Which call indicates that a contract may be signed next week?
 ```
+
+As calls atuais só tratam de orçamento no Q3, uma demonstração de analytics, lentidão de API em testes de pico e próxima assinatura de contrato. Evite perguntas sobre assuntos que não estão nessas transcrições, como previsão de vendas, dados pessoais, detalhes de produto não citados ou informações externas. O RAG só pode responder bem quando há evidência na base.
 
 Observe quais transcrições aparecem em **Contexto recuperado**. Se a evidência não for a esperada, o problema está na fonte, no chunking ou no retrieval - não necessariamente no modelo generativo.
 

@@ -78,9 +78,15 @@ def main() -> None:
     collection = build_collection(embedder)
     client = genai.Client(api_key=GEMINI_API_KEY)
 
-    question = "Is the customer worried about money or pricing?"
-    answer = run_rag(question, embedder, collection, client)
-    print(f"--- Resposta do Gemini ---\n{answer}")
+    print("\nFaça perguntas sobre as calls. Pressione Enter sem texto para encerrar.")
+    while True:
+        question = input("\nPergunta: ").strip()
+        if not question:
+            print("Demo encerrado.")
+            break
+
+        answer = run_rag(question, embedder, collection, client)
+        print(f"--- Resposta do Gemini ---\n{answer}")
 
 
 if __name__ == "__main__":
